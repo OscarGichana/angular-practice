@@ -1,0 +1,91 @@
+  <div class="container"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.gt-md="space-around center"
+    fxLayoutGap="10px" 
+    fxLayoutGap.xs="0">
+
+    <div fxFlex="40">
+      <div fxFlex *ngIf="selectedDish">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <h3>{{selectedDish.name | uppercase}}</h3>
+            </mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src={{selectedDish.image}} alt={{selectedDish.name}}>
+          <mat-card-content>
+        <p>{{selectedDish.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+        </mat-card-actions>
+        </mat-card>
+      </div>
+
+    </div>
+
+    <div fxFlex="40">
+      <div fxFlex *ngIf="selectedDish">
+        <h1>Comments:</h1>
+        <mat-list>
+          <mat-list-item>
+            <div>
+              <p>{{selectedDish.comments[0].comment}}</p>
+              <p>{{selectedDish.comments[0].rating}}</p>
+              <p>-- {{selectedDish.comments[0].author}}-- {{selectedDish.comments[0].date}}</p>
+            </div>
+          </mat-list-item>
+
+          <br><br><br><br><br><br>
+
+          <mat-list-item>
+            <div>
+              <p>{{selectedDish.comments[1].comment}}</p>
+              <p>{{selectedDish.comments[1].rating}}</p>
+              <p>-- {{selectedDish.comments[1].author}}-- {{selectedDish.comments[1].date}}</p>
+            </div>
+          </mat-list-item>
+
+          <br><br><br><br><br><br>
+
+          <mat-list-item>
+            <div>
+              <p>{{selectedDish.comments[2].comment}}</p>
+              <p>{{selectedDish.comments[2].rating}}</p>
+              <p>-- {{selectedDish.comments[2].author}}-- {{selectedDish.comments[2].date}}</p>
+            </div>
+          </mat-list-item>
+
+          <br><br><br><br><br><br>
+
+          <mat-list-item>
+            <div>
+              <p>{{selectedDish.comments[3].comment}}</p>
+              <p>{{selectedDish.comments[3].rating}}</p>
+              <p>-- {{selectedDish.comments[3].author}}-- {{selectedDish.comments[3].date}}</p>
+
+            </div>
+          </mat-list-item>
+
+          <br><br><br><br><br><br>
+
+          <mat-list-item>
+            <div>
+              <p>{{selectedDish.comments[4].comment}}</p>
+              <p>{{selectedDish.comments[4].rating}}</p>
+              <p>-- {{selectedDish.comments[4].author}}-- {{selectedDish.comments[4].date}}</p>
+            </div>
+          </mat-list-item>
+      
+        </mat-list>
+      </div>
+  </div>
+
+
+
+
+  
+</div>
