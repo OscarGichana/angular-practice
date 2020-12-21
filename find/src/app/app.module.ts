@@ -29,6 +29,7 @@ import { FeaturedService } from './services/featured.service';
 
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     HomeComponent,
     AboutComponent,
     ContactComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
